@@ -1,29 +1,32 @@
-# LangChain Ecosystem
+streamlit==1.60.0
+
+# LangChain / LangGraph
 langchain==1.0.2
-langchain-core==1.0.2
+langchain-core==1.6.2
 langchain-community==0.4.0
 langgraph==1.0.1
-langchain-google-genai
+langchain-google-genai==4.4.0
 
-# Search Tool
+# Gemini
+google-genai==2.22.0
+
+# Search
 tavily-python==0.7.12
 
-# Web Scraping
+# Web scraping
 beautifulsoup4==4.13.5
 lxml==6.0.1
-requests==2.32.5
+requests==2.34.2
 httpx==0.28.1
 
-# Environment Variables
+# Environment variables
 python-dotenv==1.1.1
 
-# Token Counting
+# Token counting
 tiktoken==0.11.0
 
-# Validation
-pydantic==2.11.7
-
-# Utilities
-tenacity==9.1.2
-typing-extensions==4.15.0
-orjson==3.11.2
+# Validation / utilities
+pydantic==2.13.5
+tenacity==9.1.4
+typing-extensions==4.16.0
+orjson==3.12.0
