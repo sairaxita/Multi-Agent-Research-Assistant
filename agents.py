@@ -6,13 +6,17 @@ from langchain_core.output_parsers import StrOutputParser
 from tools import web_search , scrape_url 
 import os
 from dotenv import load_dotenv
+import streamlit as st
 
 load_dotenv()
 
 api_key = os.getenv("GEMINI_API_KEY")
 
 if not api_key:
-    raise ValueError("GEMINI_API_KEY not found in .env")
+    try:
+        api_key = st.secrets["GEMINI_API_KEY"]
+    except Exception:
+        raise ValueError("GEMINI_API_KEY not found")
 
 
 llm = ChatGoogleGenerativeAI(
