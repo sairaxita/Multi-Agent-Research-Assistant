@@ -8,9 +8,18 @@ from rich import print
 from dotenv import load_dotenv
 load_dotenv()
 from langgraph.checkpoint.serde.jsonplus import JsonPlusSerializer
+tavily_api_key = os.getenv("TAVILY_API_KEY")
 
+if not tavily_api_key:
+    try:
+        import streamlit as st
+        tavily_api_key = st.secrets["TAVILY_API_KEY"]
+    except Exception:
+        raise ValueError("TAVILY_API_KEY not found")
+
+from langgraph.checkpoint.serde.jsonplus import JsonPlusSerializer
 #loading tavily client
-tavily=TavilyClient(api_key=os.getenv("TAVILY_API_KEY"))
+tavily=TavilyClient(api_key=tavily_api_key)
 
 #creating our 1st tool
 @tool
