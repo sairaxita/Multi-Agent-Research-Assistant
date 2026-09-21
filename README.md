@@ -4,7 +4,7 @@ A Streamlit-based multi-agent research application that searches the web, scrape
 
 ## Live Demo
 
-[Open the deployed application](https://doc-ques-ans-system.streamlit.app/)
+[Open the deployed application](https://raxita-s-multi-agent-research-assistant.streamlit.app/)
 
 ## Technologies Used
 
